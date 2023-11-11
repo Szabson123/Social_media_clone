@@ -1,19 +1,13 @@
 {% extends "accounts/base.html" %}
 {% block content %}
 
-<div class="container mt-4">
-    <h1>Sign in</h1>
-    <form method="POST" class="mt-3">
+<div class="container">
+    <h1>Sign Up</h1>
+    <form method="POST">
         {% csrf_token %}
-        <div class="mb-3">
-            {{ form.username|as_crispy_field }}
-        </div>
-        <div class="mb-3">
-            {{ form.password|as_crispy_field }}
-        </div>
-        <!-- Inne pola formularza -->
         <input type="submit" class="btn btn-success" value="Sign Up">
     </form>
 </div>
+
 
 {% endblock %}
